@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'enumeration'
+
+    publishedGroupId = 'group.aim.framework'
+    libraryName = 'Enumeration'
+    artifact = 'enumeration'
+
+    libraryDescription = 'Enumeratiom used for another'
+
+    siteUrl = 'https://github.com/narztiizzer/AIM-Enumeration'
+    gitUrl = 'https://github.com/narztiizzer/AIM-Enumeration.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'narztiizzer'
+    developerName = 'Nattapong Poomtong'
+    developerEmail = 'nattapong.poom@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "24.0.2"
@@ -29,3 +53,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.0.0'
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'https://dl.dropboxusercontent.com/u/83667991/Library/Script/install-v1.gradle'
+apply from: 'https://dl.dropboxusercontent.com/u/83667991/Library/Script/bintray-v1.gradle'
